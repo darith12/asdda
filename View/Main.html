@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportCastle.com</title>
+  <link rel="icon" href="/images/sportcastle.jpg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="style/page1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style/Main.css">
+  <style>
+    .product {
+      display: flex;
+    }
+  </style>
+  <script>
+    function Search() {
+      let input = document.getElementById('Search-item').value.toLowerCase();
+      let items = document.getElementsByClassName('product');
+
+      for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        let text = item.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky">
+    <div class="container-fluid ms-lg-4">
+      <a class="navbar-brand" href="">
+        <img style="width: 50px; height: 50px;" src="/images/sportcastle.jpg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="d-flex">
+        <input onkeyup="Search()" id="Search-item" style="width: 500px;"
+          class="form-control me-2 rounded-pill btn btn-outline-success bg-light text-dark" type="search"
+          placeholder="Search" aria-label="Search">
+      </form>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4 justify-content-around">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#">Contact US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#">Membership?</a>
+          </li>
+          <i class="fa-solid fa-cart-shopping fs-4 mt-2 text-secondary ms-3 text-dark"></i>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto d-flex justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="Main.html">All</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="NewArrival.html">New Arrival</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="Promotion.html">Up to 10% Off</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shoe.html">Shoes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="jersey.html">Jersey</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Accessories.html">Accessories</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div style="width: 90%;height: 400px; margin-left: 60px;" class="carousel-item active">
+        <img src="/images/Italy.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <div style="color: lightblue;">
+            <h5>Italy Kits</h5>
+            <p>Nazionale di calcio dell'Italia</p>
+          </div>
+        </div>
+      </div>
+      <div style="width: 90%;height: 400px; margin-left: 60px;" class="carousel-item">
+        <img src="/images/Germany.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <div style="color: lightskyblue;">
+            <h5>Germany kits</h5>
+            <p>Deutsche Fußballnationalmannschaft</p>
+          </div>
+        </div>
+      </div>
+      <div style="width: 90%;height: 400px; margin-left: 60px;" class="carousel-item">
+        <img src="/images/England.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <div style="color: lightskyblue;">
+            <h5>England Kits</h5>
+            <p>England national football team</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="my-5 ms-3">New Arrival</h3>
+  <div class="container d-flex my-5 justify-content-around flex-wrap">
+    <div class="card col-12 col-md-6 col-lg-4 product w-25 border-3" style="width: 15rem;">
+      <img style="height: 200px;" src="/images/nike_zoom_mercurial_superfly_9_.webp" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Nike Zoom Air Mercurial Superfly 9 Elite FG - White / Coconut Milk / Bright Crimson /
+          Off-Noir</p>
+        <h3 style="width: 50px;" class="text-dark">$45</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product w-25 border-3" style="width: 15rem;">
+      <img style="height: 200px;" src="/images/Vapor 15.avif" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Nike Air Zoom Mercurial Vapor XV MDS Elite FG</p>
+        <h3 style="margin-top:65px;width: 50px;" class="text-dark">$45</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product w-25 border-3" style="width: 15rem;">
+      <img style="height: 100px;" src="/images/Mbappe superfly.jpg" class="card-img-top my-5" alt="...">
+      <div class="card-body my-2 border-3">
+        <p class="card-text">Nike Kylian Mbapp x Mercurial Superfly 8 Academy MG 'Flames' DB2857-506</p>
+        <h3 style="width: 50px;" class="text-dark">$55</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/belguim kits.jpg" class="card-img-top rounded-1" alt="...">
+      <div class="card-body">
+        <p class="card-text">Belgium Home kits 2024</p>
+        <h3 style="width: 50px;" class="text-dark">$25</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/italykits.jpg" class="card-img-top rounded-1" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Italy Home kits 2024</p>
+        <h3 style="width: 50px; margin-top: 35px;">$25</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/France Euro 2024 Home Kit  (1).jpg" class="card-img-top rounded-1"
+        alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">France Home kits 2024</p>
+        <h3 style="width: 50px; margin-top: 35px;">$25</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img style="height: 235px;" src="/images/euro2024 ball.jpg" class="card-img-top rounded-1" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Euro2024 Official Ball</p>
+        <h3 style="width: 50px; margin-top: 40px;">$20</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img style="height: 150px;" src="/images/WC Qatar.jpg" class="card-img-top h-75 rounded-1" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">WorldCup Qatar 2022 Official Ball</p>
+        <h3 style="width: 50px;">$20</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img src="/images/Copa 2024.png" class="card-img-top h-75 rounded-1" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">CopaAmerica2024 Official Ball</p>
+        <h3 style="width: 50px;">$20</h3>
+      </div>
+    </div>
+  </div>
+  <!--Promotion-->
+  <h3>
+    <marquee behavior="alternate" direction="right" class="text-danger my-3">Up to 10% Off</marquee>
+  </h3>
+  <h3>
+    <marquee behavior="alternate" direction="left" class="text-danger">Up to 10% Off</marquee>
+  </h3>
+  <div stye class="container d-flex my-5 justify-content-around flex-wrap ">
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style="height: 200px;" src="/images/predator.jpg" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text ">Addidas Predator 20.3</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 60px;"> <s>$45</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 55px;">to</h2>
+          <h2 style="margin-top: 55px;" class="text-danger ms-3">$41.5</h2>
+        </div>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style="height: 200px;" src="/images/DC pumaboots.avif" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Puma Future Ultimate FG</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 60px;"> <s>$45</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 55px;">to</h2>
+          <h2 style="margin-top: 55px;" class="text-danger ms-3">$41.5</h2>
+        </div>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product   border-3" style="width: 15rem;">
+      <img style="width: 100%; height: 200px;" src="/images/DC puma boots2.avif" class="card-img-top " alt="...">
+      <div class="card-body my-2 border-3">
+        <p class="card-text">Puma Ultra2.4 FG</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 60px;"> <s>$40</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 55px;">to</h2>
+          <h2 style="margin-top: 55px;" class="text-danger ms-3">$41</h2>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card col-12 col-md-6 col-lg-4 product  mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px; " src="/images/Dc portugal 2020-21.jpeg" class="card-img-top rounded-1 " alt="...">
+      <div class="card-body ">
+        <p class="card-text">Portugal Home kits 2020</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 60px;"> <s>$25</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 55px;">to</h2>
+          <h2 style="margin-top: 55px;" class="text-danger ms-3">$24.25</h2>
+        </div>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product  mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px; " src="/images/Dc argentina 2021-2022.webp" class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Argentina Away kits 2020</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 60px;"> <s>$25</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 55px;">to</h2>
+          <h2 style="margin-top: 55px;" class="text-danger ms-3">$22.5</h2>
+        </div>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product  mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px; " src="/images/dc brazil2022.webp" class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Brazil Home kits 2022</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 60px;"> <s>$25</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 55px;">to</h2>
+          <h2 style="margin-top: 55px;" class="text-danger ms-3">$22.5</h2>
+        </div>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/dc england2022.webp" class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">England Home kits 2022</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 80px;"> <s>$20</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 75px;">to</h2>
+          <h2 style="margin-top: 75px;" class="text-danger ms-3">$18</h2>
+        </div>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/Italy-125th-Anniversary-Jersey-2023 DC.jpg"
+        class="card-img-top h-100 rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Italy 125th Italy-125th-Anniversary-Jersey-2023</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 60px;"> <s>$25</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 55px;">to</h2>
+          <h2 style="margin-top: 55px;" class="text-danger ms-3">$22.5</h2>
+        </div>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px; " src="/images/spain_away_jersey_qatar_2022.jpg_1720644667 dc.jpg"
+        class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">spain away Kit 2022</p>
+        <div class="price-discount d-flex">
+          <h3 style="margin-top: 80px;"> <s>$20</s></h3>
+          <h2 style="margin-left: 20px; margin-top: 75px;">to</h2>
+          <h2 style="margin-top: 75px;" class="text-danger ms-3">$18</h2>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!--Shoes-->
+  <h3 class=" my-5 ms-3">Shoes</h3>
+  <div stye class="container d-flex my-5 justify-content-around flex-wrap ">
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/Nike mercuriall Vapor XII Elite.avif" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text ">Nike mercuriall Vapor XII Elite</p>
+        <h3 style="  margin-top: 40px;">$45</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/Adidas Copa Sense.jpg" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Adidas Copa Sense</p>
+        <h3 style="margin-top:65px;">$45</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style=" height: 300px;" src="/images/Nike-Mercurial-Vapor-13-Pro.webp" class="card-img-top " alt="...">
+      <div class="card-body my-2 border-3">
+        <p class="card-text ">Nike Kylian Mbapp x Mercurial Superfly 8</p>
+        <h3 style="margin-top: 30px;">$55</h3>
+      </div>
+
+    </div>
+
+    <div class="card  col-12 col-md-6 col-lg-4 product  mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/shoes. mizuno morelia neo zen fg.avif" class="card-img-top rounded-1 "
+        alt="...">
+      <div class="card-body ">
+        <p class="card-text">Mizuno morelia neo zen </p>
+        <h3 style="margin-top: 40px;">$40</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px; " src="/images/shoes.4-mizuno-morelia-neo-caribbean-blue (1).jpg"
+        class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Mizuno-morelia-neo-caribbean-blue</p>
+        <h3>$40</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px; " src="/images/shoes.Puma-ONE-Gold.jpg" class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Puma-ONE-Gold Limited Edition</p>
+        <h3>$60</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;"
+        src="/images/shoes.New-Nike-Air-Zoom-Mercurial-Vapor-XV-Elite-FG-Low-Top-Football-Boots-06.jpeg"
+        class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Nike AirZoom Mercurial VaporXV Elite</p>
+        <h3 style="margin-top: 30px;">$45</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/shoes.adidas-men-s-predator-18-fg-soccer-boots-pink.jpg"
+        class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">adidas mens predator18</p>
+        <h3 style="margin-top: 55px;">$42</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px; " src="/images/NIke mercurial superfly dragonfly8.avif" class="card-img-top  rounded-1"
+        alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Nike mercurial superfly dragonfly8</p>
+        <h3 style="margin-top: 30px;">$50</h3>
+      </div>
+
+    </div>
+
+  </div>
+  <!--Jersey-->
+  <h3 class=" my-5 ms-3">Jersey</h3>
+  <div stye class="container d-flex my-5 justify-content-around flex-wrap ">
+    <div class="card col-12 col-md-6 col-lg-4 product border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/jersey. manu2024.jpg" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text ">Manchester United Home Kit 2024</p>
+        <h3 style=" width: 50px; font-size: 25px;">$25</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/jersey.mancity2024.jpg" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Manchester City Home Kit 2024</p>
+        <h3>$25</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style="height: 300px; " src="/images/jersey.real2024.avif" class="card-img-top " alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Real Madrid Home Kit 2024</p>
+        <h3 style="margin-top:40px ;">$25</h3>
+      </div>
+
+    </div>
+
+    <div class="card col-12 col-md-6 col-lg-4 product  mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px; " src="/images/jersey.acmilan2023.jpg" class="card-img-top  rounded-1 " alt="...">
+      <div class="card-body ">
+        <p class="card-text">AC Milan Home Kit 2023</p>
+        <h3>$25</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px; " src="/images/jersey.barce2024.jpg" class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">FC Barcelona Home Kit 2024</p>
+        <h3>$25</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/jersey.bayern2024.jpg" class="card-img-top rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Bayern munich Home Kit 2024</p>
+        <h3>$25</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/jersey.juventus2024.jpg" class="card-img-top rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Juventus Home Kit 2024</p>
+        <h3>$20</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/jersey.psg2023.webp" class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Paris Saint Germain Away kit 2023</p>
+        <h3>$20</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/jersey.bayernleverkusen 2024.jpg" class="card-img-top h-75 rounded-1"
+        alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Bayern Leverkusen Away kit 2024</p>
+        <h3>$20</h3>
+      </div>
+
+    </div>
+
+  </div>
+  <!--Accessories-->
+  <h3 class=" my-5 ms-3">Accessories</h3>
+  <div stye class="container d-flex my-5 justify-content-around flex-wrap ">
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/acc. Nike Strike Mercurial Sock.avif" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text ">Nike Strike Mercurial Sock</p>
+        <h3 style="margin-top:85px ;">$5</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/acc.Nike Grip Strike LightCrew Sock.avif" class="card-img-top" alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Nike Grip Strike LightCrew Sock</p>
+        <h3 style="margin-top:65px;">$6</h3>
+      </div>
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product  border-3" style="width: 15rem;">
+      <img style="height: 200px; " src="/images/acc.Adidas Freak 3.0.webp" class="card-img-top my-5" alt="...">
+      <div class="card-body my-2 border-3">
+        <p class="card-text">Adidas Freak 3.0</p>
+        <h3 style="margin-top:85px ;">$15</h3>
+      </div>
+
+    </div>
+
+    <div class="card col-12 col-md-6 col-lg-4 product  mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px;" src="/images/acc.Nike Adult Vapor jet5.0.jpg" class="card-img-top rounded-1 "
+        alt="...">
+      <div class="card-body ">
+        <p class="card-text">Nike Adult Vapor jet5.0</p>
+        <h3 style="margin-top:65px ;">$12</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3" style="width: 15rem;">
+      <img style="height: 300px; " src="/images/acc.Nike Mercurial Lite Shin.avif" class="card-img-top  rounded-1"
+        alt="...">
+      <div class="card-body border-3">
+        <p class="card-text">Nike Mercurial Lite Shin</p>
+        <h3 style="margin-top:65px ;">$5</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px; " src="/images/acc.Nike Shin Pads Mercurial Flylite.jpg"
+        class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Nike Shin Pads Mercurial Flylite</p>
+        <h3 style="margin-top:45px ;">$7</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/acc.Wrist Tape.jpg" class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Wrist Tape</p>
+        <h3>$3</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px;" src="/images/acc.Nike Knitted Knee Sleeve.jpg" class="card-img-top  rounded-1"
+        alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Nike Knitted Knee Sleeve</p>
+        <h3>$4</h3>
+      </div>
+
+    </div>
+    <div class="card col-12 col-md-6 col-lg-4 product mt-3 border-3 " style="width: 15rem;">
+      <img style="height: 300px; " src="/images/acc.Nike Captain Armband.jpg" class="card-img-top  rounded-1" alt="...">
+      <div class="card-body border-3 ">
+        <p class="card-text">Nike Captain Armband</p>
+        <h3>$5</h3>
+      </div>
+
+    </div>
+
+  </div>
+  <hr>
+  <!--Below Details-->
+  <div class="container-fluid product d-flex flex-wrap justify-content-center border-5 border-dark">
+    <div class="logo-item">
+      <img style="max-width: 100%; height: auto;" src="/images/sportcastle.jpg" alt="Sport Castle">
+      <p class="text-center">Sport Castle</p>
+    </div>
+    <div class="logo-item">
+      <img style="max-width: 100%; height: auto;" src="/images/nikelogo.png" alt="Nike">
+      <p class="text-center">Nike</p>
+    </div>
+    <div class="logo-item">
+      <img style="max-width: 100%; height: auto;" src="/images/addidas logo.jpg" alt="Adidas">
+      <p class="text-center">Adidas</p>
+    </div>
+    <div class="logo-item">
+      <img style="max-width: 100%; height: auto;" src="/images/puma logo.jpg" alt="Puma">
+      <p class="text-center">Puma</p>
+    </div>
+    <div class="logo-item">
+      <img style="max-width: 100%; height: auto;" src="/images/mizunologo.jpg" alt="Mizuno">
+      <p class="text-center">Mizuno</p>
+    </div>
+    <div class="logo-item">
+      <img style="max-width: 100%; height: auto;" src="/images/etec.jpg" alt="Etec Project">
+      <p class="text-center">Etec Project</p>
+    </div>
+  </div>
+
+  </div>
+
+</body>
+
+</html>

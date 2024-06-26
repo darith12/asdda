@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="Js/Signup.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center h-100">
+    <div class="col-12 col-md-6 p-0 m-0 my-5">
+      <img style="height:410px;" class="img-fluid w-100 " src="/images/eurologo.jpg" alt="">
+    </div>
+    <div class="col-12 col-md-6 bg-light border border-success border-2 p-3 my-5">
+      <div class="header d-flex align-items-center mb-4">
+        <img class="img-fluid" style="width: 90px; height: 80px;" src="/images/sportcastle_1_-removebg-preview.png" alt="">
+        <h3 class="my-3 ms-5 text-success">Create Account</h3>
+      </div>
+      <center>
+        <a class="text-decoration-none text-danger my-4 d-block" href="/View/Login Page.html">I have an account? Login</a>
+        <input class="form-control rounded-3 w-75 border border-success my-2" type="text" placeholder="Username">
+        <input class="form-control rounded-3 w-75 my-4 border border-success" type="password" placeholder="Password">
+        <input class="form-control rounded-3 w-75 my-2 border border-success" type="password" placeholder="Confirm Password">
+        <button id="signup-btn" class="btn btn-success my-2">Sign Up</button>
+      </center>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $("#signup-btn").click(function() {
+        var username = $("input").eq(0).val();
+        var password = $("input").eq(1).val();
+        var confirmpassword = $("input").eq(2).val();
+
+        if (username === "" || password === "" || confirmpassword === "") {
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Please Fill Information",
+            showConfirmButton: false,
+            timer: 2000
+          });
+        } else if (password === confirmpassword) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Account Created Successfully",
+            showConfirmButton: false,
+            timer: 2000
+          }).then(function () {
+            console.log("Redirecting to View/Main.html");
+            window.location.href = "/View/Main.html";
+          });
+        } else {
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Passwords do not match",
+            showConfirmButton: false,
+            timer: 2000
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

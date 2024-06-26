@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportCastle.com</title>
+  <link rel="icon" href="/images/sportcastle.jpg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="Js/login.js"></script>
+</head>
+
+<body class="d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
+
+  <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center h-100">
+    <div style="height: 380px;" class="container-fluid col-12 col-md-6 w-50 border p-0  m-0 my-5">
+      <img style="width: 100%; height: 100%; " src="/images/eurologo.jpg" alt="">
+    </div>
+    <div  class="col-12 col-md-6 bg-light border border-success border-3 my-5 p-3">
+      <div class="header d-flex align-items-center mb-4">
+        <img class="img-fluid" style="width: 100px; height: 70px;" src="/images/sportcastle_1_-removebg-preview.png"
+          alt="">
+        <h3 style="margin-left: 100px;" class="my-3 text-success ">Login 
+
+        </h3>
+      </div>
+      <center>
+        <input id="username-txt" class="form-control rounded-3 w-75 border border-success my-2 " type="text"
+          placeholder="Username">
+        <input id="password-txt" class="form-control rounded-3 w-75 border border-success my-2" type="password"
+          placeholder="Password">
+        <button id="login-btn" class="btn btn-success my-3">Login</button>
+        <p class="my-2">Forget Password?</p>
+        <hr class="text-success fs-1 w-75">
+        <a href="/View/create page.html" class="text-decoration-none text-dark">Create Account</a>
+      </center>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $("#login-btn").click(function () {
+        var username = $("#username-txt").val();
+        var password = $("#password-txt").val();
+
+        console.log("Button clicked");
+        console.log("Username: " + username);
+        console.log("Password: " + password);
+
+        if (username === "User" && password === "1234") {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Signing In",
+            showConfirmButton: false,
+            timer: 2000
+          }).then(function () {
+            console.log("Redirecting to View/Main.html");
+            window.location.href = "/View/Main.html";
+          });
+        } else {
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Incorrect Username or Password",
+            showConfirmButton: false,
+            timer: 2000
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
